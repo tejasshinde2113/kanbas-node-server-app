@@ -11,9 +11,11 @@ export default function UserRoutes(app) {
     const findUserById = (req, res) => { };
     const updateUser = (req, res) => { 
         const userId = req.params.userId;
+        console.log("TESTING USERID "+ userId)
         const userUpdates = req.body;
         dao.updateUser(userId, userUpdates);
         const currentUser = dao.findUserById(userId);
+
         req.session["currentUser"] = currentUser;
         res.json(currentUser);
     };
@@ -31,7 +33,7 @@ export default function UserRoutes(app) {
     const signin = (req, res) => { 
         const { username, password } = req.body;
         const currentUser = dao.findUserByCredentials(username, password);
-        console.log(currentUser);
+        console.log(currentUser+ "TESTING TEJAS");
         if (currentUser) {
             req.session["currentUser"] = currentUser;
             res.json(currentUser);
