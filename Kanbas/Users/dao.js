@@ -10,7 +10,7 @@ export const createUser = (user) => {
 export const findAllUsers = () => users;
 export const findUserById = (userId) => users.find((user) => user._id === userId);
 export const findUserByUsername = (username) => users.find((user) => user.username === username);
-export const findUserByCredentials = (username, password) {
+export const findUserByCredentials = (username, password)=> {
   console.log(username+ "TESTING findUserByCredentials username");
   users.find( (user) => user.username === username && user.password === password );
   console.log(username+ "TESTING findUserByCredentials username after");
