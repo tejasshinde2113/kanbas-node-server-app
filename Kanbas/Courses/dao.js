@@ -31,3 +31,4 @@ export function updateCourse(courseId, courseUpdates) {
   Object.assign(course, courseUpdates);
   return course;
 }
+

@@ -1,4 +1,3 @@
-
 export default function QueryParameters(app) {
     app.get("/lab5/calculator", (req, res) => {
       const { a, b, operation } = req.query;

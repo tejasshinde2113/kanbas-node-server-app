@@ -16,7 +16,7 @@ app.use(cors({
     origin: process.env.NETLIFY_URL || "http://localhost:3000",
 }));
 const sessionOptions = {
-    secret: process.env.SESSION_SECRET || "kanbas",
+    secret: "any string",
     resave: false,
     saveUninitialized: false,
 };
@@ -42,3 +42,4 @@ ModuleRoutes(app);
 AssignmentRoutes(app);
 
 app.listen(process.env.PORT || 4000)
+
